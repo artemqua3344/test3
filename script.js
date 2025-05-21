@@ -16,27 +16,26 @@ let jsonData = getJsonValues();
 let output = document.getElementById("output");
 
 
-function buildTable(jsonData) {
-let HTML = ``;
-    for (let i = 0; i < jsonData.length; i++) {
-        
-        const name = jsonData[i].name;
-        const comment = jsonData[i].comment;
-        
-        console.log(`${name} ${comment}`);
-        HTML += `
-        <div class="comment-div">
-            <div class="title">${name}</div>
-            <div class="comment">${comment}</div>
-        </div>`;
+document.addEventListener("DOMContentLoaded", async function() {
+    let jsonData = await getJsonValues();
+    let output = document.getElementById("output");
 
+    function buildTable(jsonData) {
+        let HTML = ``;
+        for (let i = 0; i < jsonData.length; i++) {
+            const name = jsonData[i].name;
+            const comment = jsonData[i].comment;
+            console.log(`${name} ${comment}`);
+            HTML += `
+            <div class="comment-div">
+                <div class="title">${name}</div>
+                <div class="comment">${comment}</div>
+            </div>`;
+        }
+        return HTML;
     }
 
-return HTML  
-}
-
-let table = buildTable(jsonData);
-
-
-output.innerHTML = table;
-console.log(jsonData);
+    let table = buildTable(jsonData);
+    output.innerHTML = table;
+    console.log(jsonData);
+});
