@@ -17,9 +17,9 @@ let output = document.getElementById("output");
 
 
 function buildTable(jsonData) {
-
+let HTML = ``;
     for (let i = 0; i < jsonData.length; i++) {
-        let HTML = ``;
+        
         const name = jsonData[i].name;
         const comment = jsonData[i].comment;
         
