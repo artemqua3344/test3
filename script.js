@@ -34,5 +34,5 @@ return HTML
     
 }
 
-output.innerHTML = buildTable(jsonData);
+output.innerHTML = () => buildTable(jsonData);
 console.log(jsonData);
