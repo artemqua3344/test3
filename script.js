@@ -30,9 +30,11 @@ function buildTable(jsonData) {
 
     }
 
-return HTML
-    
+return HTML  
 }
 
-output.innerHTML = () => buildTable(jsonData);
+let table = buildTable(jsonData);
+
+
+output.innerHTML = table;
 console.log(jsonData);
