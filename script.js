@@ -12,7 +12,7 @@ async function getJsonValues(filename = "data.json") {
 
 }
 
-let jsonData[] = getJsonValues();
+let jsonData = getJsonValues();
 let output = document.getElementById("output");
 let HTML = ``;
 
