@@ -28,8 +28,8 @@ function buildTable(jsonData) {
         </div>`;
 
     }
-    document.getElementById("output").innerHTML = buildTable(jsonData);
+    
 }
 
-
+document.getElementById("output").innerHTML = buildTable(jsonData);
 console.log(jsonData);
