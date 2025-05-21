@@ -14,14 +14,14 @@ async function getJsonValues(filename = "data.json") {
 
 let jsonData = getJsonValues();
 let output = document.getElementById("output");
-let HTML = ``;
 
 function buildTable(jsonData) {
 
     for (let i = 0; i < jsonData.length; i++) {
         const name = jsonData[i].name;
         const comment = jsonData[i].comment;
-
+        
+        console.log(`${name} ${comment}`);
         HTML += `
         <div class="comment-div">
             <div class="title">${name}</div>
