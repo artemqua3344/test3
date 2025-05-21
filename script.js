@@ -15,9 +15,11 @@ async function getJsonValues(filename = "data.json") {
 let jsonData = getJsonValues();
 let output = document.getElementById("output");
 
+
 function buildTable(jsonData) {
 
     for (let i = 0; i < jsonData.length; i++) {
+        let HTML = ``;
         const name = jsonData[i].name;
         const comment = jsonData[i].comment;
         
